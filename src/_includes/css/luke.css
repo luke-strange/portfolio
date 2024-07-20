@@ -1,0 +1,103 @@
+/* Heavily inspired by https://github.com/open-innovations/housing/blob/main/src/_includes/css/oi.css */
+:root {
+    --luke-main-fontstack: "Courier New",Helvetica,Arial,"Lucida Grande",sans-serif;
+    --luke-title-fontstack: "Courier New";
+  }
+  html, body {
+      padding: 0px;
+      margin: 0px;
+      min-height: 100%!important;
+      height: 100%!important;
+      background-color: #ffffff;
+      font-family: var(--luke-main-fontstack);
+    /* https://css-tricks.com/accessible-font-sizing-explained/#aa-avoid-setting-a-base-font-size */
+      font-size: 100%;
+      color: #333;
+      line-height: 1.44em;
+  }
+  h1, .title, .subtitle { font-family: var(--luke-title-fontstack); line-height: 1em; }
+  h2,h3,h4, .title, .subtitle { font-family: var(--luke-main-fontstack); line-height: 1em; }
+  h1, .title { font-size: 2em; margin-top: 1em; font-weight: 600; }
+  h2 { font-size: 1.7em; margin-top: 1.764706em; font-weight: 500; }
+  h3 { font-size: 1.4em; margin-top: 1.428571em; }
+  h1:first-child, h2:first-child, h3:first-child, .title { margin-top: 0; }
+  h1 + *, h2 + *, h3 + * { margin-top: 1em; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  a { color: black; text-decoration: underline; }
+  .bold { color: #18AD87; }
+  p, time, li, td, th, footer, div { font-weight: 300; }
+  p, iframe, h2, h3, figure, ul, ol, .block, .padded-bottom { margin-bottom: 1em; }
+  button, .button { border: 0px; font-size: 1em; background-color: #efefef; color: black; text-decoration: none!important; display: inline-block; padding: 0.5em 1em; cursor: pointer; vertical-align: top; line-height: 1.25em; }
+  a:hover, a:focus { text-decoration: underline; }
+  p > a:visited { color: #92748d; }
+  header a { text-decoration: none; color: white;}
+  footer { width: 100%; padding-bottom: 3em; }
+  footer h2 + p { margin-top: 1em; }
+  footer a { color: #1DD3A7; }
+  code,pre { font-family: monospace; color: #444; background-color: #efefef; }
+  code { padding: 0.125em 0.25em; }
+  pre { max-width: 100%; overflow-x: auto; padding: 16px; margin-bottom: 16px; }
+  pre code { padding: 0; }
+  ul { list-style: disc; }
+  ol { list-style: decimal; }
+  ul { padding: 0; margin-left: 2em; }
+  .msg { text-align:center; padding: 0.5em; }
+  
+  .holder { position: relative; width: 1080px; max-width: 100%; margin: auto; }
+  .holder.padded > *:last-child { margin-bottom: 0; }
+  button, .button { margin-top: 0.25em; border: 0px; font-size: 1em; background-color: #efefef; color: black; text-decoration: none!important; display: inline-block; padding: 0.5em 1em; cursor: pointer; }
+  a.button:hover, button:hover, button:focus, a.button:focus { background-color: #333333!important; color: #efefef!important; }
+  .b1-bg { background-color: #212a31; color: white!important; }
+  .b2-bg { background-color: #D8C4A6; color: black!important; }
+  .b3-bg { background-color: #8E8D8A; color: white!important; }
+  .b3-bg, .github:hover { background-color: #999999; color: black!important; }
+  .b4-bg { background-color: #E98074; color: black!important; }
+  .b5-bg, .off label { background-color: #dfdfdf; color: black!important; }
+  .b6-bg { background-color: #EAE7DC; color: black!important; }
+  .c1-bg { background-color: #748d92; color: white; margin-bottom: 0;}
+  .warning { color: rgb(14, 8, 0); background-color: rgb(240, 145, 57); filter: drop-shadow(0px 0px 1px rgb(95, 82, 7)); }
+  .padded { padding: 1em; }
+  .padded-bottom { padding: 1em; margin-bottom: 1em; }
+  .doublepadded { padding: 2em; }
+  .spaced { margin-bottom: 1em; }
+  .centred { text-align: center; }
+  .tallpadded { padding-top: 3em; padding-bottom: 3em; }
+  
+  .skip-to-content-link { position: absolute; top: -3rem; right: 0.5rem; z-index: 2000; transition: top 0.3s; padding: 0.5rem 1rem; }
+  .skip-to-content-link:focus { top: 0.25rem; }
+  
+  header h1 { margin-top: 0; }
+  header nav ul {
+      width: min-content;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.2em;
+      position: relative;
+      font-family: Poppins;
+      display: flex;
+  }
+  header nav ul li { display: inline-block; }
+  header nav ul > li > a { padding: 0.5rem 1rem; display: inline-block; width: 100%; color: inherit; }
+  header nav ul > li > a:hover, header nav ul > li > a:focus { background: white; color: black; }
+  
+  .grid { display: grid; grid-template-columns: repeat(2,1fr); grid-gap: 1em; }
+  .grid .pane { background: #f9f9f9; }
+  
+  .elsewhere { float: right; margin-top: 0; }
+  .elsewhere li { display: inline-block; margin-left: 0.5em; }
+  .elsewhere li:first-child { margin-left: 0; }
+  .elsewhere li a { line-height: 0; display: block; }
+  footer .address { margin-top: 1em; }
+  footer a { color: inherit; }
+  footer hr.about { margin: 32px 0; border: 0; border-top:1px solid #444; }
+  
+  @media only screen and (max-width: 1080px) {
+      .grid { grid-template-columns: 100%; }
+  }
+  
+  @media only screen and (max-width: 800px) {
+      .elsewhere { float:none; margin-left: 0; margin-bottom: 1em; }
+      .doublepadded { padding: 1em; }
+  }
+h2 a { text-decoration: none; }

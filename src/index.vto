@@ -1,0 +1,14 @@
+---
+title: Welcome
+---
+<p>
+    Hi! I am a Data Scientist/Engineer working at <a href="https:\\open-innovations.org">one of the UK's leading and longest-lived Open Data 
+    and Innovation institutions.</a> I made this website using <a href="https:\\lume.land">Lume</a>, a fast & flexible static site generator.
+    It's primarily a site for me to keep everything in one place; I hope you find what you're looking for.
+</p>
+<div class='grid'>
+    {{ for page of search.pages('navorder>0', 'navorder') }}
+        {{# <p><a href="{{ page.url }}">{{ page.title }}</a></p> #}}
+        {{ comp.navgrid({ heading: page.title, url: page.url }) }}
+    {{ /for }}
+</div>
