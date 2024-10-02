@@ -1,6 +1,7 @@
 ---
 title: Welcome
 ---
+{{# These would work better as a nav bar with example work linked on this page as described in comment on professional page #}}
 <p>
     Hi! I am a Data Scientist/Engineer working at <a href="https:\\open-innovations.org">one of the UK's leading and longest-lived Open Data 
     and Innovation institutions.</a> I made this website using <a href="https:\\lume.land">Lume</a>, a fast & flexible static site generator.
@@ -9,6 +10,6 @@ title: Welcome
 <div class='grid'>
     {{ for page of search.pages('navorder>0', 'navorder') }}
         {{# <p><a href="{{ page.url }}">{{ page.title }}</a></p> #}}
-        {{ comp.navgrid({ heading: page.title, url: page.url }) }}
+        {{ comp.navgrid({ heading: page.title, link: page.url, colour: page.colour }) }}
     {{ /for }}
 </div>
